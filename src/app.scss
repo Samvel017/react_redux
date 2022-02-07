@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 8fr 2fr;
+  font-family: sans-serif;
+  .header {
+    grid-column: 1/2;
+    border: 1px solid;
+    grid-row: 1/2;
+    padding: 25px;
+    nav {
+      display: flex;
+      grid-gap: 25px;
+
+      button {
+        border: none;
+        padding: 7px 12px;
+        background-color: royalblue;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 7px;
+      }
+    }
+  }
+  .main {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    border: 1px solid;
+    overflow-y: auto;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      grid-gap: 30px;
+      padding: 25px;
+
+      .card {
+        width: 300px;
+        height: 300px;
+        display: grid;
+        place-items: center;
+        border: 1px solid;
+        position: relative;
+        .close-btn {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          background-color: red;
+          color: #fff;
+          border: none;
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .instructions {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    border: 1px solid;
+  }
+}
